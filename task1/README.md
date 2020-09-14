@@ -1,6 +1,8 @@
 ## Task 1
 This program starts N threads, each one of them prints its own id.
 
+This program was written for Windows so it has .bat files for building and for running.
+
 Threads print their id numbers in reverse order. This is implemented with 
 
 ``` C
