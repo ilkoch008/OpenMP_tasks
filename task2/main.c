@@ -22,6 +22,6 @@ int main(int argc, char **argv) {
     end = omp_get_wtime();
     double time = end - start;
     printf("result: %ld\n", sum);
-    printf("time: %f\n", time);
+    printf("execution time: %f\n", time);
     return 0;
 }
