@@ -1,5 +1,5 @@
 ## Task3
-### The task
+### Task
 An array of 100'000 elements is declared and initialized so that a[i] = i.
 
 - Write a program that creates a new array, where the following values will be stored: b [i] = (a [i-1] * a [i] * a [i + 1]) / 3.0
