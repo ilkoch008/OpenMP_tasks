@@ -67,24 +67,13 @@ RM = C:\Users\Ilya\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\202.7319.72\b
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\ProgsProjects\OpenMP_tasks\task2
+CMAKE_SOURCE_DIR = C:\ProgsProjects\OpenMP_tasks\task3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\ProgsProjects\OpenMP_tasks\task2\cmake-build-debug
+CMAKE_BINARY_DIR = C:\ProgsProjects\OpenMP_tasks\task3\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	C:\Users\Ilya\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\202.7319.72\bin\cmake\win\bin\cmake.exe -E echo "No interactive CMake dialog available."
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -97,11 +86,22 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	C:\Users\Ilya\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\202.7319.72\bin\cmake\win\bin\cmake.exe -E echo "No interactive CMake dialog available."
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\ProgsProjects\OpenMP_tasks\task2\cmake-build-debug\CMakeFiles C:\ProgsProjects\OpenMP_tasks\task2\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\ProgsProjects\OpenMP_tasks\task3\cmake-build-debug\CMakeFiles C:\ProgsProjects\OpenMP_tasks\task3\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\ProgsProjects\OpenMP_tasks\task2\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\ProgsProjects\OpenMP_tasks\task3\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -130,17 +130,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named task2
+# Target rules for targets named task3
 
 # Build rule for target.
-task2: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 task2
-.PHONY : task2
+task3: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 task3
+.PHONY : task3
 
 # fast build rule for target.
-task2/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\task2.dir\build.make CMakeFiles/task2.dir/build
-.PHONY : task2/fast
+task3/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\task3.dir\build.make CMakeFiles/task3.dir/build
+.PHONY : task3/fast
 
 main.obj: main.c.obj
 
@@ -148,7 +148,7 @@ main.obj: main.c.obj
 
 # target to build an object file
 main.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\task2.dir\build.make CMakeFiles/task2.dir/main.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\task3.dir\build.make CMakeFiles/task3.dir/main.c.obj
 .PHONY : main.c.obj
 
 main.i: main.c.i
@@ -157,7 +157,7 @@ main.i: main.c.i
 
 # target to preprocess a source file
 main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\task2.dir\build.make CMakeFiles/task2.dir/main.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\task3.dir\build.make CMakeFiles/task3.dir/main.c.i
 .PHONY : main.c.i
 
 main.s: main.c.s
@@ -166,7 +166,7 @@ main.s: main.c.s
 
 # target to generate assembly for a file
 main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\task2.dir\build.make CMakeFiles/task2.dir/main.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\task3.dir\build.make CMakeFiles/task3.dir/main.c.s
 .PHONY : main.c.s
 
 # Help Target
@@ -177,7 +177,7 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... task2
+	@echo ... task3
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
