@@ -25,7 +25,8 @@ int main() {
 #pragma omp  for schedule(static)
         for (int i = 2; i < SIZE; i++) {
             if (first_it) {
-                while (1) {
+                while (1) { // synchronizing two first cycles in the same way as in first task
+                            // (computing first and second steps from first process to last)
                     if (id == check) {
                         omp_set_lock(&simple_lock);
                         if (first_it == 2) {
@@ -50,7 +51,7 @@ int main() {
                         break;
                     }
                 }
-            } else {
+            } else { // computing for other steps
                 buff3 = buff2;
                 buff2 = buff1;
                 buff1 = a[i];
@@ -67,5 +68,7 @@ int main() {
     }
     printf("\n");
     printf("execution time: %f\n", time);
+    free(a);
+    omp_destroy_lock(&simple_lock);
     return 0;
 }
