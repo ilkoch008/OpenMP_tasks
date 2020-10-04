@@ -3,6 +3,6 @@ project(task4 C)
 
 set(CMAKE_C_STANDARD 11)
 
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fopenmp")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fopenmp -Ofast")
 
 add_executable(task4 main.c)

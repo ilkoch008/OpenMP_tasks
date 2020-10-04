@@ -2,7 +2,7 @@
 #include <omp.h>
 #include <stdlib.h>
 #define SIZE 1500
-#define T_NUM 8
+#define T_NUM 10
 
 void matrixMult_def(double ** matrixA, double ** matrixB, double ** matrixC, int size);
 void matrixMult_stat_str(double ** matrixA, double ** matrixB, double ** matrixC, int size);
@@ -22,11 +22,11 @@ int main() {
     double ** matrixC = matrixInit(SIZE);
 
 
-//    start = omp_get_wtime();
-//    matrixMult_def(matrixA, matrixB, matrixC, SIZE);
-//    end = omp_get_wtime();
-//    res = end - start;
-//    printf("execution time for def: %f\n", res);
+    start = omp_get_wtime();
+    matrixMult_def(matrixA, matrixB, matrixC, SIZE);
+    end = omp_get_wtime();
+    res = end - start;
+    printf("execution time for def: %f\n", res);
 
 //    start = omp_get_wtime();
 //    matrixMult_stat_str(matrixA, matrixB, matrixC, SIZE);
@@ -45,19 +45,19 @@ int main() {
 //    end = omp_get_wtime();
 //    res = end - start;
 //    printf("execution time for guided_str: %f\n", res);
-
+//
 //    start = omp_get_wtime();
 //    matrixMult_static_all(matrixA, matrixB, matrixC, SIZE);
 //    end = omp_get_wtime();
 //    res = end - start;
 //    printf("execution time for static_all: %f\n", res);
-
-    start = omp_get_wtime();
-    matrixMult_dyn_all(matrixA, matrixB, matrixC, SIZE);
-    end = omp_get_wtime();
-    res = end - start;
-    printf("execution time for dyn_all: %f\n", res);
-
+//
+//    start = omp_get_wtime();
+//    matrixMult_dyn_all(matrixA, matrixB, matrixC, SIZE);
+//    end = omp_get_wtime();
+//    res = end - start;
+//    printf("execution time for dyn_all: %f\n", res);
+//
 //    start = omp_get_wtime();
 //    matrixMult_guided_all(matrixA, matrixB, matrixC, SIZE);
 //    end = omp_get_wtime();

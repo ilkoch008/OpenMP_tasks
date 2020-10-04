@@ -8,6 +8,7 @@
 int main() {
     omp_set_num_threads(T_NUM);
     unsigned long long int *a = malloc(SIZE * sizeof(unsigned long long int));
+    unsigned long long int save;
     for (int i = 0; i < SIZE; i++) {
         a[i] = (unsigned long long int) i;
     }
@@ -22,6 +23,7 @@ int main() {
     omp_init_lock(&simple_lock);
     int check;
     double end, start = omp_get_wtime();
+    save = a[SIZE-1];
 
 #pragma omp parallel shared(a, simple_lock, check) default (none)
     {
@@ -70,8 +72,11 @@ int main() {
             }
         }
     }
-
     end = omp_get_wtime();
+    for (int i = 1; i < SIZE-1; ++i) {
+        a[i] = a[i+1];
+    }
+    a[SIZE-1] = save;
     double time = end - start;
 
     printf("calculated array: ");
