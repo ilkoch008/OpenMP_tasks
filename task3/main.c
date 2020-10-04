@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 #define T_NUM 2
-#define SIZE 100000
+#define SIZE 15
 
 int main() {
     omp_set_num_threads(T_NUM);
@@ -11,9 +11,16 @@ int main() {
     for (int i = 0; i < SIZE; i++) {
         a[i] = (unsigned long long int) i;
     }
+
+    printf("original array: ");
+    for (int i = 0; i < SIZE; i++) {
+        printf("%lld ", a[i]);
+    }
+    printf("\n");
+
     omp_lock_t simple_lock;
     omp_init_lock(&simple_lock);
-    int check = 0;
+    int check;
     double end, start = omp_get_wtime();
 
 #pragma omp parallel shared(a, simple_lock, check) default (none)
@@ -22,11 +29,15 @@ int main() {
         int first_it = 2;
         unsigned long long int buff1, buff2, buff3;
         int num_of_p = omp_get_num_threads();
+#pragma omp master
+        {
+            check = num_of_p - 1;
+        }
 #pragma omp  for schedule(static)
         for (int i = 2; i < SIZE; i++) {
             if (first_it) {
                 while (1) { // synchronizing two first cycles in the same way as in first task
-                            // (computing first and second steps from first process to last)
+                            // (computing first and second steps from last process to first)
                     if (id == check) {
                         omp_set_lock(&simple_lock);
                         if (first_it == 2) {
@@ -42,10 +53,10 @@ int main() {
                             a[i] = buff3 * buff2 * buff1 / 3;
                             first_it--;
                         }
-                        if(check != num_of_p - 1){
-                            check++;
-                        } else {
-                            check = 0;
+                        if(check != 0){
+                            check--;
+                        } else { // cocking the counter on the zero thread
+                            check = num_of_p - 1;
                         }
                         omp_unset_lock(&simple_lock);
                         break;
@@ -63,6 +74,7 @@ int main() {
     end = omp_get_wtime();
     double time = end - start;
 
+    printf("calculated array: ");
     for (int i = 0; i < SIZE; i++) {
         printf("%lld ", a[i]);
     }
