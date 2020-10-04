@@ -41,10 +41,26 @@ void matrixMult_guided_all(double ** matrixA, double ** matrixB, double ** matri
 
 Here you can see the results of execution:
 
-![](https://github.com/ilkoch008/OpenMP_tasks/raw/master/task4/exec_time.png)
+![](https://github.com/ilkoch008/OpenMP_tasks/raw/master/task4/images/exec_time.png)
 
 
-![](https://github.com/ilkoch008/OpenMP_tasks/raw/master/task4/speed-up.png)
+![](https://github.com/ilkoch008/OpenMP_tasks/raw/master/task4/images/speed-up.png)
 
 Speed-up for dynamic load balancing may be increased with increasing of minimal block.
 For example, with minimal block = 1000 time of execution on 4 threads equals 11.6 seconds.
+
+### Bonus
+
+Let's try the same but with *-Ofast* flag of compilation.
+
+
+![](https://github.com/ilkoch008/OpenMP_tasks/raw/master/task4/images/exec_time_O.png)
+
+
+![](https://github.com/ilkoch008/OpenMP_tasks/raw/master/task4/images/speed-up_O.png)
+
+It can be pointed out that speed-up has decreased.
+
+In general all computations lasted three times less.
+
+To be honest, I expected that speed-up in comparison with no optimization mode will be less.
