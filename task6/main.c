@@ -55,6 +55,8 @@ int main(int argc, char **argv) {
     end = omp_get_wtime();
     res = end - start;
     printf("execution time: %f\n", res);
+    free(numbers);
+    free(pack.prime_nums);
     return 0;
 }
 
