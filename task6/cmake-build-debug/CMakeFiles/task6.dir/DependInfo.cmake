@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "C:/ProgsProjects/OpenMP_tasks/task6/main.c" "C:/ProgsProjects/OpenMP_tasks/task6/cmake-build-debug/CMakeFiles/task6.dir/main.c.obj"
+  "R:/progi_4/openMP/OpenMP_tasks/task6/main.c" "R:/progi_4/openMP/OpenMP_tasks/task6/cmake-build-debug/CMakeFiles/task6.dir/main.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

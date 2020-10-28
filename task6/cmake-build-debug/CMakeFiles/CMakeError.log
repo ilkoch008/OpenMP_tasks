@@ -1,0 +1,39 @@
+Determining if the C compiler works failed with the following output:
+Change Dir: R:/progi_4/openMP/OpenMP_tasks/task6/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe cmTC_e6ef1/fast && C:/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe  -f CMakeFiles\cmTC_e6ef1.dir\build.make CMakeFiles/cmTC_e6ef1.dir/build
+mingw32-make.exe[1]: Entering directory 'R:/progi_4/openMP/OpenMP_tasks/task6/cmake-build-debug/CMakeFiles/CMakeTmp'
+process_begin: CreateProcess(NULL, C:\Users\╨Р╨╜╨┤╤А╨╡╨╣\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\202.7660.37\bin\cmake\win\bin\cmake.exe -E cmake_echo_color --switch= --progress-dir=R:\progi_4\openMP\OpenMP_tasks\task6\cmake-build-debug\CMakeFiles\CMakeTmp\CMakeFiles --progress-num=1 "Building C object CMakeFiles/cmTC_e6ef1.dir/testCCompiler.c.obj", ...) failed.
+make (e=2): ═х єфрхЄё  эрщЄш єърчрээ√щ Їрщы.
+mingw32-make.exe[1]: *** [CMakeFiles\cmTC_e6ef1.dir\build.make:84: CMakeFiles/cmTC_e6ef1.dir/testCCompiler.c.obj] Error 2
+mingw32-make.exe[1]: Leaving directory 'R:/progi_4/openMP/OpenMP_tasks/task6/cmake-build-debug/CMakeFiles/CMakeTmp'
+mingw32-make.exe: *** [Makefile:140: cmTC_e6ef1/fast] Error 2
+
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: R:/progi_4/openMP/OpenMP_tasks/task6/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe cmTC_c6b12/fast && C:/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe  -f CMakeFiles\cmTC_c6b12.dir\build.make CMakeFiles/cmTC_c6b12.dir/build
+mingw32-make.exe[1]: Entering directory 'R:/progi_4/openMP/OpenMP_tasks/task6/cmake-build-debug/CMakeFiles/CMakeTmp'
+process_begin: CreateProcess(NULL, C:\Users\╨Р╨╜╨┤╤А╨╡╨╣\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\202.7660.37\bin\cmake\win\bin\cmake.exe -E cmake_echo_color --switch= --progress-dir=R:\progi_4\openMP\OpenMP_tasks\task6\cmake-build-debug\CMakeFiles\CMakeTmp\CMakeFiles --progress-num=1 "Building C object CMakeFiles/cmTC_c6b12.dir/testCCompiler.c.obj", ...) failed.
+make (e=2): ═х єфрхЄё  эрщЄш єърчрээ√щ Їрщы.
+mingw32-make.exe[1]: *** [CMakeFiles\cmTC_c6b12.dir\build.make:84: CMakeFiles/cmTC_c6b12.dir/testCCompiler.c.obj] Error 2
+mingw32-make.exe[1]: Leaving directory 'R:/progi_4/openMP/OpenMP_tasks/task6/cmake-build-debug/CMakeFiles/CMakeTmp'
+mingw32-make.exe: *** [Makefile:140: cmTC_c6b12/fast] Error 2
+
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: R:/progi_4/openMP/OpenMP_tasks/task6/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe cmTC_3d494/fast && C:/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe  -f CMakeFiles\cmTC_3d494.dir\build.make CMakeFiles/cmTC_3d494.dir/build
+mingw32-make.exe[1]: Entering directory 'R:/progi_4/openMP/OpenMP_tasks/task6/cmake-build-debug/CMakeFiles/CMakeTmp'
+process_begin: CreateProcess(NULL, C:\Users\╨Р╨╜╨┤╤А╨╡╨╣\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\202.7660.37\bin\cmake\win\bin\cmake.exe -E cmake_echo_color --switch= --progress-dir=R:\progi_4\openMP\OpenMP_tasks\task6\cmake-build-debug\CMakeFiles\CMakeTmp\CMakeFiles --progress-num=1 "Building C object CMakeFiles/cmTC_3d494.dir/testCCompiler.c.obj", ...) failed.
+make (e=2): ═х єфрхЄё  эрщЄш єърчрээ√щ Їрщы.
+mingw32-make.exe[1]: *** [CMakeFiles\cmTC_3d494.dir\build.make:84: CMakeFiles/cmTC_3d494.dir/testCCompiler.c.obj] Error 2
+mingw32-make.exe[1]: Leaving directory 'R:/progi_4/openMP/OpenMP_tasks/task6/cmake-build-debug/CMakeFiles/CMakeTmp'
+mingw32-make.exe: *** [Makefile:140: cmTC_3d494/fast] Error 2
+
+
+

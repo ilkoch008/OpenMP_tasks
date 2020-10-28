@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-C:/ProgsProjects/OpenMP_tasks/task6/main.c
+R:/progi_4/openMP/OpenMP_tasks/task6/main.c
 stdio.h
 -
 omp.h
