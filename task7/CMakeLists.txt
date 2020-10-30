@@ -3,4 +3,10 @@ project(task7 C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(task7 main.c)
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fopenmp ")
+
+set(SOURCE_FILES main.c)
+
+add_executable(task7 ${SOURCE_FILES})
+
+target_link_libraries(task7 mingw32 SDL2main SDL2)

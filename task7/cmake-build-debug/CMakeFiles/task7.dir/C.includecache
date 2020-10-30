@@ -13,8 +13,10 @@ omp.h
 -
 stdlib.h
 -
+SDL2/SDL.h
+-
 math.h
 -
-windows.h
+string.h
 -
 
