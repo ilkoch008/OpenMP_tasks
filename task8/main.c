@@ -193,7 +193,7 @@ void par_q_sort(ArrayList * list){
     }
 }
 
-void par_quicksort(ArrayList *list, int start, int end) { 
+void par_quicksort(ArrayList *list, int start, int end) {
 
     int med0 = partition(list, start, end);
     int med1, med2;
