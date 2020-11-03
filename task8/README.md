@@ -20,7 +20,7 @@ taken from wikipedia and looks like
         quicksort(A, p + 1, high)
 ```
 
-partition takes three values from the given section, the first, from the middle of the section and the last. Selects the average from these three values and moves it to the end of the segment (let's call it the reference). Then a cycle begins, which from the left end of the section searches for elements larger than the reference. If such is found, the second cycle begins, which from the right end searches for elements less than the reference one. When found, the found items are swapped. At some point, the cycles will converge on one element (on average, in the middle of the section). This element is interchanged with the reference element, which is at the end of the section. The location of the reference is returned.
+```partition``` takes three values from the given section, the first, from the middle of the section and the last. Selects the average from these three values and moves it to the end of the segment (let's call it the reference). Then a cycle begins, which from the left end of the section searches for elements larger than the reference. If such is found, the second cycle begins, which from the right end searches for elements less than the reference one. When found, the found items are swapped. At some point, the cycles will converge on one element (on average, in the middle of the section). This element is interchanged with the reference element, which is at the end of the section. The location of the reference is returned.
 
 #### parallel algorithm
 
