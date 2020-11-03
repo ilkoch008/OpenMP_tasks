@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/ProgsProjects/OpenMP_tasks/task8/all.h
+stdio.h
+-
+omp.h
+-
+stdlib.h
+-
+time.h
+-
+assert.h
+-
+string.h
+-
+
+C:/ProgsProjects/OpenMP_tasks/task8/main.c
+all.h
+C:/ProgsProjects/OpenMP_tasks/task8/all.h
+
