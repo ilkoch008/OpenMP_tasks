@@ -1,4 +1,4 @@
-### Task 6
+### Task 7
 
 Create a parallel program that solves the heat equation for the steady state of a rectangular region for a given accuracy 𝜀.
 
