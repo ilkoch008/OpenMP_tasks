@@ -198,6 +198,11 @@ void par_quicksort(ArrayList *list, int start, int end) {
     int med0 = partition(list, start, end);
     int med1, med2;
 
+    if(end - start < 100){
+        q_sort(list);
+        return;
+    }
+
 
 #pragma omp parallel shared(med0, med1, med2, list, start, end) default (none)
     {
