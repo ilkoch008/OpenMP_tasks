@@ -89,10 +89,10 @@ First, let's test it on something easier. Just to be sure that all done in right
 
 <img src="https://raw.githubusercontent.com/ilkoch008/OpenMP_tasks/master/task10/misc/Screenshot_25.png" width="">
 
-'''
+```
 h = 0.000019073486328125 = 20/2^20
 N = 1048576 = 2^20
-'''
+```
 
 For a = 1:
 
@@ -106,88 +106,88 @@ Seems like everything's alright. Let's move on to our task, that is
 
 <img src="https://raw.githubusercontent.com/ilkoch008/OpenMP_tasks/master/task10/misc/Screenshot_3.png" width="">
 
-'''
+```
 a = 100
 h = 0.000019073486328125 = 20/2^20
 N = 1048576 = 2^20
-'''
+```
 
 <img src="https://raw.githubusercontent.com/ilkoch008/OpenMP_tasks/master/task10/misc/Screenshot_28.png" width="">
 
-And something is already wrong here. It is seen that the function is not smooth. Also the '''check_sum''' which is 
+And something is already wrong here. It is seen that the function is not smooth. Also the ```check_sum``` which is 
 
 <img src="https://raw.githubusercontent.com/ilkoch008/OpenMP_tasks/master/task10/misc/Screenshot_29.png" width="">
 
-is pretty big: '''check_sum = 1.9907030992811863'''. For test examples this value was much less than one. Let's try smaller '''h''':
+is pretty big: ```check_sum = 1.9907030992811863```. For test examples this value was much less than one. Let's try smaller ```h```:
 
-'''
+```
 N = 16777216 = 2^24
 h = 0.0000011920928955078125 = 20/2^24
-'''
+```
 
 <img src="https://raw.githubusercontent.com/ilkoch008/OpenMP_tasks/master/task10/misc/Screenshot_30.png" width="">
 
-And nothing had changed. Even '''check_sum = 1.9917383597402347'''.
+And nothing had changed. Even ```check_sum = 1.9917383597402347```.
 
-Let's try big '''a''':
+Let's try big ```a```:
 
-'''
+```
 a = 1000000
 N = 16777216 = 2^24
 h = 0.0000011920928955078125 = 20/2^24
-'''
+```
 
 <img src="https://raw.githubusercontent.com/ilkoch008/OpenMP_tasks/master/task10/misc/Screenshot_31.png" width="">
 
-'''
+```
 check_sum = 198.3996323916111600
-'''
+```
 
-'''check_sum''' had become even bigger. We can see that Y quickly approaches a one (trivial solution of equation).
+```check_sum``` had become even bigger. We can see that Y quickly approaches a one (trivial solution of equation).
 
 ### This is not the end
 
-Small research with '''wolframalpha''' showed that for '''y(0) > 0.99704''' solution is nonperiodic and monotonic. But for '''y(0): 0 < y(0) < 0.99704''' solution is periodic. So we can try to find a solution for our problem using another border conditions.
+Small research with ```wolframalpha``` showed that for ```y(0) > 0.99704``` solution is nonperiodic and monotonic. But for ```y(0): 0 < y(0) < 0.99704``` solution is periodic. So we can try to find a solution for our problem using another border conditions.
 
-Let's take '''y(-10) = y(10) = 0.997, y(x != -10, 10) = 0''' because for '''y > 0''' solution approaches to one. And other parameters:
-'''
+Let's take ```y(-10) = y(10) = 0.997, y(x != -10, 10) = 0``` because for ```y > 0``` solution approaches to one. And other parameters:
+```
 N = 4194304 = 2^22
 h = 0.00000476837158203125 = 20/2^22
 a = 1000000
-'''
+```
 
 <img src="https://raw.githubusercontent.com/ilkoch008/OpenMP_tasks/master/task10/misc/Screenshot_32.png" width="">
 
-Finally, after the first step we can see the periodic structure. With huge '''check_sum = 418172.10879999999'''. After some iterations solution begins to approach to 1 (or to -1). Let's try some other values of '''a''':
+Finally, after the first step we can see the periodic structure. With huge ```check_sum = 418172.10879999999```. After some iterations solution begins to approach to 1 (or to -1). Let's try some other values of ```a```:
 
-'''
+```
 a = 500000 :
-'''
+```
 
 <img src="https://raw.githubusercontent.com/ilkoch008/OpenMP_tasks/master/task10/misc/Screenshot_33.png" width="">
 
-'''
+```
 a = 100000 :
-'''
+```
 
 <img src="https://raw.githubusercontent.com/ilkoch008/OpenMP_tasks/master/task10/misc/Screenshot_34.png" width="">
 
-'''
+```
 a = 10000 :
-'''
+```
 
 <img src="https://raw.githubusercontent.com/ilkoch008/OpenMP_tasks/master/task10/misc/Screenshot_35.png" width="">
 
-'''
+```
 a = 1000 :
-'''
+```
 
 <img src="https://raw.githubusercontent.com/ilkoch008/OpenMP_tasks/master/task10/misc/Screenshot_36.png" width="">
 
-'''
+```
 a = 100 :
-'''
+```
 
 <img src="https://raw.githubusercontent.com/ilkoch008/OpenMP_tasks/master/task10/misc/Screenshot_37.png" width="">
 
-The dependence of the period on the coefficient '''a''' is clearly seen.
+The dependence of the period on the coefficient ```a``` is clearly seen.
