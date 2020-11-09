@@ -38,7 +38,7 @@ The resulting system:
 
 <img src="https://raw.githubusercontent.com/ilkoch008/OpenMP_tasks/master/task10/misc/Screenshot_11.png" width="">
 
-In matrix form:
+In matrix form (for ```N = 8```):
 
 <img src="https://raw.githubusercontent.com/ilkoch008/OpenMP_tasks/master/task10/misc/Screenshot_12.png" width="">
 
