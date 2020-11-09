@@ -11,9 +11,13 @@
 //#define POW 24
 //#define h 0.0000011920928955078125 // = 20/2^24
 
-#define N 1048576 // = 2^20
-#define POW 20
-#define h 0.000019073486328125 // = 20/2^24
+//#define N 1048576 // = 2^20
+//#define POW 20
+//#define h 0.000019073486328125 // = 20/2^20
+
+#define N 4194304 // = 2^22
+#define POW 22
+#define h 0.00000476837158203125 // = 20/2^22
 
 
 void setOnes(long double * array);
@@ -40,26 +44,26 @@ int main(int argc, char *argv[]) {
     long double sqrt_2 = sqrt(2);
 
     for (int i = 0; i < N+1; ++i) {
-        Y[i] = sqrt_2;
-        Y_next[i] = sqrt_2;
+        Y[i] = 0;
+        Y_next[i] = 0;
         a[i] = 1;
         c[i] = 1;
     }
 
-//    Y[0] = sqrt_2;
-//    Y[N] = -sqrt_2;
-//    Y_next[0] = sqrt_2;
-//    Y_next[N] = -sqrt_2;
+    Y[0] = 0.997;
+    Y[N] = 0.997;
+    Y_next[0] = 0.997;
+    Y_next[N] = 0.997;
 
     //=========================================================================
     long double * save;
-    double diff = 1000;
+    double diff = 100;
     double check1, check2 = 100;
     double check_best = 10000;
     double check_best_a;
     int i = 0;
 
-        while (i < 5) {
+        while (i < 2) {
             compute_b(b, Y);
             compute_g(g, Y);
             setOnes(a);
@@ -71,7 +75,7 @@ int main(int argc, char *argv[]) {
             save = Y;
             Y = Y_next;
             Y_next = save;
-            printf("iteration %d, check: %0.16lf, diff: %0.16lf\n", i, check2, diff);
+            printf("iteration %d, check: %0.16lf, diff: %0.16lf\n", i, check1, diff);
             fflush(stdout);
             i++;
         }
@@ -215,8 +219,8 @@ long double check_sum(const long double * Y){
     long double res=0;
 #pragma omp parallel for num_threads(T_NUM) shared(Y,a_const) reduction(+: res) default(none)
     for (int i = 1; i < N; i++) {
-//        res += fabsl(h*((Y[i+1]-2*Y[i]+Y[i-1])/(h*h) - a_const*(Y[i]*Y[i]*Y[i] - Y[i])));
-        res += fabsl(h*((Y[i+1]-2*Y[i]+Y[i-1])/(h*h) - a_const*(- Y[i])));
+        res += fabsl(h*((Y[i+1]-2*Y[i]+Y[i-1])/(h*h) - a_const*(Y[i]*Y[i]*Y[i] - Y[i])));
+//        res += fabsl(h*((Y[i+1]-2*Y[i]+Y[i-1])/(h*h) - a_const*(- Y[i])));
     }
     return res;
 }
