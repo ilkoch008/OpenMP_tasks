@@ -147,9 +147,9 @@ check_sum = 198.3996323916111600
 
 ### This is not the end
 
-Small research with ```wolframalpha``` showed that for ```y(0) > 0.99704``` solution is nonperiodic and monotonic. But for ```y(0): 0 < y(0) < 0.99704``` solution is periodic. So we can try to find a solution for our problem using another border conditions.
+Small research with ```wolframalpha``` showed that for ```y(0) > 0.99704``` solution is nonperiodic and monotonic. But for ```y(0): 0 < y(0) < 0.99704``` solution is periodic. So we can try to find a solution to our problem using another border conditions.
 
-Let's take ```y(-10) = y(10) = 0.997, y(x != -10, 10) = 0``` because for ```y > 0``` solution approaches to one. And other parameters:
+Let's take ```y(-10) = y(10) = 0.997, y(x != -10, 10) = 0``` because for ```y > 0``` solution approaches one. And other parameters:
 ```
 N = 4194304 = 2^22
 h = 0.00000476837158203125 = 20/2^22
@@ -158,7 +158,7 @@ a = 1000000
 
 <img src="https://raw.githubusercontent.com/ilkoch008/OpenMP_tasks/master/task10/misc/Screenshot_32.png" width="">
 
-Finally, after the first step we can see the periodic structure. With huge ```check_sum = 418172.10879999999```. After some iterations solution begins to approach to 1 (or to -1). Let's try some other values of ```a```:
+Finally, after the first step we can see the periodic structure. With huge ```check_sum = 418172.10879999999```. After some iterations solution begins to approach 1 (or -1). Let's try some other values of ```a```:
 
 ```
 a = 500000 :
