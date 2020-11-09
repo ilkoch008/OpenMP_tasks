@@ -74,7 +74,7 @@ From here, we can go reverse:
 
 <img src="https://raw.githubusercontent.com/ilkoch008/OpenMP_tasks/master/task10/misc/Screenshot_23.png" width="">
 
-For example, for the last step of forward part:
+For example, for the first step of reverse part:
 
 <img src="https://raw.githubusercontent.com/ilkoch008/OpenMP_tasks/master/task10/misc/Screenshot_24.png" width="">
 
