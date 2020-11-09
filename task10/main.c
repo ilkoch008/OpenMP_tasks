@@ -58,14 +58,7 @@ int main(int argc, char *argv[]) {
     double check_best = 10000;
     double check_best_a;
     int i = 0;
-//    while (a_const < 1000001) {
-//        for (int j = 0; j < N+1; ++j) {
-//            Y[j] = sqrt_2;
-//            Y_next[j] = sqrt_2;
-//            a[j] = 1;
-//            c[j] = 1;
-//        }
-//        i = 0;
+
         while (i < 5) {
             compute_b(b, Y);
             compute_g(g, Y);
@@ -82,13 +75,7 @@ int main(int argc, char *argv[]) {
             fflush(stdout);
             i++;
         }
-//        if(check2 < check_best){
-//            check_best = check2;
-//            check_best_a = (double) a_const;
-//            printf("NEW!!! : check_best: %lf, check_best_a: %lf", (double)check_best, check_best_a);
-//        }
-//        a_const += 1000;
-//    }
+
     //=========================================================================
     print_array("Y.txt", Y_next, N+1);
     print_x("x.txt", N+1);
