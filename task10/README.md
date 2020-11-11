@@ -191,3 +191,7 @@ a = 100 :
 <img src="https://raw.githubusercontent.com/ilkoch008/OpenMP_tasks/master/task10/misc/Screenshot_37.png" width="">
 
 The dependence of the period on the coefficient ```a``` is clearly seen.
+
+#### Update
+
+After some time I found out that solution for ```Y[-10] = Y[10] = sqrt(2)``` is also periodic after first step.
