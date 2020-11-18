@@ -44,16 +44,21 @@ int main(int argc, char *argv[]) {
     long double sqrt_2 = sqrt(2);
 
     for (int i = 0; i < N+1; ++i) {
-        Y[i] = 0;
-        Y_next[i] = 0;
+        Y[i] = 0.1;
+        Y_next[i] = 0.1;
         a[i] = 1;
         c[i] = 1;
     }
 
-    Y[0] = 0.997;
-    Y[N] = 0.997;
-    Y_next[0] = 0.997;
-    Y_next[N] = 0.997;
+//    Y[0] = 0.997;
+//    Y[N] = 0.997;
+//    Y_next[0] = 0.997;
+//    Y_next[N] = 0.997;
+
+    Y[0] = sqrt_2;
+    Y[N] = sqrt_2;
+    Y_next[0] = sqrt_2;
+    Y_next[N] = sqrt_2;
 
     //=========================================================================
     long double * save;
@@ -63,7 +68,7 @@ int main(int argc, char *argv[]) {
     double check_best_a;
     int i = 0;
 
-        while (i < 2) {
+        while (i < 100) {
             compute_b(b, Y);
             compute_g(g, Y);
             setOnes(a);
