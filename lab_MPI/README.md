@@ -50,11 +50,11 @@ It does the same thing as previous two functions but in one cycle.
 
 Measurement table:
 
-![]
+![](https://raw.githubusercontent.com/ilkoch008/OpenMP_tasks/master/lab_MPI/misc/main_table.png)
 
 Speedups graph:
 
-![]
+![](https://raw.githubusercontent.com/ilkoch008/OpenMP_tasks/master/lab_MPI/misc/main_graph.png)
 
 Here was only loop-independent dependencies. 
 So we didn't think a lot about how to parallelize.
@@ -84,13 +84,13 @@ void compute_solo(double **a) {
 Here we can see loop-carried dependency. Let's look at it closely and 
 define distance vector and direction vector:
 
-![]
+![](https://raw.githubusercontent.com/ilkoch008/OpenMP_tasks/master/lab_MPI/misc/2d_dep.png)
 
 So we can parallelize inner cycle with cashing necessary data. And also we can
 parallelize outer cycle but only for 8 or less processes. For 3 slave processes 
 it will be look like this:
 
-![]
+![](https://raw.githubusercontent.com/ilkoch008/OpenMP_tasks/master/lab_MPI/misc/arrows.png)
 
 Each of the arrows represents a task for one processor.
 
@@ -120,11 +120,11 @@ but it transfers data less.
 
 Measurement table:
 
-![]
+![](https://raw.githubusercontent.com/ilkoch008/OpenMP_tasks/master/lab_MPI/misc/2d_table.png)
 
 Speedups graph:
 
-![]
+![](https://raw.githubusercontent.com/ilkoch008/OpenMP_tasks/master/lab_MPI/misc/2d_graph.png)
 
 It can be noted that due to the complication of the data exchange structure 
 and due to the lack of the ability to use all processors during the execution 
