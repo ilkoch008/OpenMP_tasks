@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/ProgsProjects/OpenMP_tasks/lab_MPI/2d.c
+stdio.h
+-
+stdlib.h
+-
+math.h
+-
+mpi.h
+-
+
+E:/Microsoft SDKs/MPI/Include/mpi.h
+stdint.h
+-
+sal.h
+-
+

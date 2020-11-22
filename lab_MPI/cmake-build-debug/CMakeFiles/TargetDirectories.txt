@@ -1,0 +1,3 @@
+C:/ProgsProjects/OpenMP_tasks/lab_MPI/cmake-build-debug/CMakeFiles/lab_MPI.dir
+C:/ProgsProjects/OpenMP_tasks/lab_MPI/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/ProgsProjects/OpenMP_tasks/lab_MPI/cmake-build-debug/CMakeFiles/rebuild_cache.dir
